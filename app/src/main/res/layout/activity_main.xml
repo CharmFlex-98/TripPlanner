@@ -1,18 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Trip Planner"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/notification_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Primary trip will be shown here"
+                tools:hint="Primary trip will be shown here" />
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/trip_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:padding="10dp"
+            tools:listitem="@layout/trip_list_item"/>
+
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_anchor="@id/trip_recycler_view"
+        android:layout_margin="20dp"
+        app:layout_anchorGravity="bottom|end"
+        android:contentDescription="Add new trip item"
+        android:src="@drawable/ic_add_new_trip" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
