@@ -44,12 +44,13 @@
 
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_anchor="@id/trip_recycler_view"
         android:layout_margin="20dp"
         app:layout_anchorGravity="bottom|end"
-        android:contentDescription="Add new trip item"
+        android:contentDescription="@string/FAB_description"
         android:src="@drawable/ic_add_new_trip" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

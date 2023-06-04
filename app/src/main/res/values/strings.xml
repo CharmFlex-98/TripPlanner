@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TripPlanner</string>
+    <string name="FAB_description">Add new trip item</string>
+    <string name="trip_name">Trip name</string>
+    <string name="trip_destination">Destination</string>
+    <string name="trip_start_date">Start date\n</string>
+    <string name="trip_end_date">End date</string>
+    <string name="choose_date">Choose date</string>
+    <string name="create_trip">Create</string>
+    <string name="add_new_trip_title">New Trip</string>
 </resources>
