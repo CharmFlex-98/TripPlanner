@@ -41,6 +41,15 @@
             android:layout_weight="0.7"
             android:padding="10dp"
             tools:listitem="@layout/trip_list_item"/>
+        <TextView
+            android:id="@+id/load_trip_list_error"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:padding="10dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="@string/load_trip_list_error_message"/>
 
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton

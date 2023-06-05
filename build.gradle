@@ -2,5 +2,8 @@
 plugins {
     id 'com.android.application' version '8.0.2' apply false
     id 'com.android.library' version '8.0.2' apply false
-    id 'org.jetbrains.kotlin.android' version '1.8.20' apply false
+    // Apply version 1.8.10 instead of latest (as of now, 1.8.20) to match ksp version. Else build fails.
+    id 'org.jetbrains.kotlin.android' version '1.8.10' apply false
+    // Kotlin Symbol Processing (replacing kapt)
+    id 'com.google.devtools.ksp' version '1.8.10-1.0.9' apply false
 }
